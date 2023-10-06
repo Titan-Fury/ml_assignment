@@ -18,6 +18,8 @@ Before running the script, make sure you have the following requirements install
 - Python 3.x
 - OpenCV
 - NumPy
+- scikit-learn
+- PyTorch
 - TensorFlow/Keras
 - SORT (Simple Online and Realtime Tracking) library
 - YOLOv3 weights, configuration file, and COCO classes file
@@ -64,6 +66,20 @@ The detection and tracking process is performed using two main components:
 ## Feature Extraction
 
 Feature extraction involves capturing discriminative features from the detected persons using a pre-trained ResNet50 model. Each person's image is resized, preprocessed, and fed into the ResNet50 model to extract a feature vector. These feature vectors are stored in a dictionary, with track IDs as keys, for further analysis or re-identification.
+
+## Person Re-Identification Model
+
+## Model
+
+The Siamese Network model is saved in `person_reid_model.pth`. Load it with PyTorch.
+
+## Evaluation
+
+Metrics calculated:
+
+- ROC-AUC
+- F1 Score
+- Accuracy
 
 ## Directory Structure
 
